@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background-rgb: 214, 219, 220;
+  --foreground-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-rgb: 0, 0, 0;
+    --foreground-rgb: 255, 255, 255;
+  }
+}
+
+body {
+  background: rgb(var(--background-rgb));
+  color: rgb(var(--foreground-rgb));
+}
+
+/* Changing the default font to commitmono */
+@font-face {
+  font-family: 'CommitMono';
+  src: url('/fonts/CommitMono-VariableFont.woff2') format('woff2-variations'),
+       url('/fonts/CommitMono-VariableFont.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@theme {
+
+
+  --font-mono: 'CommitMono', ui-monospace, SFMono-Regular, monospace;
+
+
+}
