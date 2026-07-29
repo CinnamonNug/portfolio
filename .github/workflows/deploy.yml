@@ -41,7 +41,7 @@ jobs:
         run: pnpm run build
 
       - name: Add .nojekyll file
-        run: touch .output/public/.nojekyll # Prevents GitHub from ignoring files starting with underscores
+        run: mkdir -p .output/public && touch .output/public/.nojekyll # Prevents GitHub from ignoring files starting with underscores
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
