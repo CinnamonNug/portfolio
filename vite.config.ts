@@ -9,12 +9,7 @@ export default defineConfig({
     baseURL: "/portfolio/"
   },
   plugins: [
-    solidStart({}),
+    solidStart(),
     tailwindcss(),
-    nitro(
-      {
-      preset: "static",
-      baseURL: "/portfolio/" // Ensure 'portfolio' matches your GitHub repository name exactly
-    })
   ]
 });
