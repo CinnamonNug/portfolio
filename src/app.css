@@ -27,9 +27,5 @@ body {
   font-display: swap;
 }
 @theme {
-
-
   --font-mono: 'CommitMono', ui-monospace, SFMono-Regular, monospace;
-
-
 }

@@ -1,20 +1,20 @@
-import { defineConfig } from "vite";
-import { nitro } from "nitro/vite";
 import { solidStart } from "@solidjs/start/config";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({
+export default {
+  // SolidStart's internal router architecture expects plugins down here
   plugins: [
-    solidStart(),
-    tailwindcss(),
-    nitro({
-      baseURL: "/portfolio/",
-      static: true,
-      prerender: {
-        routes: ["/"],
-        crawlLinks: true,
-      },
-    })
-  ],
-  }
-);
+    solidStart({
+      // 1. SolidStart handles Nitro natively via this built-in 'server' key
+      server: {
+        baseURL: "/portfolio/",
+        preset: "static", // Forces the 'static' SSG build
+        prerender: {
+          routes: ["/"],
+          crawlLinks: true
+        }
+      }
+    }),
+    tailwindcss() // Clean Tailwind v4 compilation path
+  ]
+};
