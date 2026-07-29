@@ -8,6 +8,7 @@ import "./app.css";
 export default function App() {
   return (
     <Router
+      base="/portfolio/"
       root={props => (
         <>
         <main class="flex flex-col min-h-screen">
