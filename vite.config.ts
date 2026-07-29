@@ -3,9 +3,13 @@ import { nitro } from "nitro/vite";
 import { solidStart } from "@solidjs/start/config";
 import tailwindcss from "@tailwindcss/vite";
 
-export default defineConfig({  
+export default defineConfig({
+  server: {
+    preset: "static",
+    baseURL: "/portfolio/"
+  },
   plugins: [
-    solidStart(),
+    solidStart({}),
     tailwindcss(),
     nitro(
       {
