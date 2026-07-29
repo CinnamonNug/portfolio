@@ -2,8 +2,8 @@ name: Deploy SolidStart to GitHub Pages
 
 on:
   push:
-    branches: ["master"] # Change to "master" if your default branch is master
-
+    branches: ["main"]
+    
 permissions:
   contents: read
   pages: write
