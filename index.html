@@ -7,7 +7,7 @@
 
   <style>
     body {
-      min-height: 100vh;
+      min-height: 100svh;
       margin: 0;
       background: black;
       color: white;
@@ -29,16 +29,19 @@
       margin-top: auto;
       margin-bottom: auto;
 
-      min-height: 100vh;
+      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
 
+
     .cat {
       width: 22.5rem;
-      margin-bottom: -3.75rem;
+      /* margin-bottom: -150px; */
+        margin-top: 6rem;
+        margin-bottom: -6rem;
     }
 
     h1 {
@@ -82,10 +85,69 @@
         font-size: 6rem;
       }
     }
+
+    nav {
+        background: black;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        padding: 0.75rem;
+        margin: 0;
+
+        list-style: none;
+        font-family: "CommitMono", monospace;
+    }
+
+    nav li {
+        margin-left: 0.375rem;
+        margin-right: 0.375rem;
+
+        border-bottom: 2px solid transparent;
+    }
+
+    nav li:hover {
+      /* border-color: #0284c7; sky-600 */
+    }
+
+    nav a {
+        color: #f5f5f5;
+        text-decoration: none;
+    }
+
   </style>
 </head>
 
 <body>
+    <nav>
+    <ul>
+        <li>
+        <a href="https://github.com/CinnamonNug" target="_blank">
+            [ Github ]
+        </a>
+        </li>
+
+        <li>
+        <a href="https://www.linkedin.com/in/cencimen/" target="_blank">
+            [ LinkedIn ]
+        </a>
+        </li>
+
+        <li>
+        <a href="https://leetcode.com/u/cengizcimen007/" target="_blank">
+            [ LeetCode ]
+        </a>
+        </li>
+
+        <li>
+        <a href="mailto:cencimen200@gmail.com">
+            [ Contact ]
+        </a>
+        </li>
+    </ul>
+    </nav>
 
   <div class="home">
     <img 
