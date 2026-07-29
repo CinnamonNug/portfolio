@@ -9,10 +9,11 @@ export default defineConfig({
     tailwindcss(),
     nitro({
       baseURL: "/portfolio/",
+      static: true,
       prerender: {
         routes: ["/"],
         crawlLinks: true,
-      }
+      },
     })
   ],
   }
