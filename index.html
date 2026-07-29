@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cengiz Cimen</title>
+
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background: black;
+      color: white;
+    }
+
+    @font-face {
+        font-family: "CommitMono";
+        src: url("/assets/fonts/CommitMono\ VariableFont.woff2") format("woff2");
+        font-weight: 100 900;
+        font-style: normal;
+    }
+
+    * {
+        font-family: "CommitMono", monospace;
+    }
+
+    .home {
+      width: 100vw;
+      margin-top: auto;
+      margin-bottom: auto;
+
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cat {
+      width: 22.5rem;
+      margin-bottom: -3.75rem;
+    }
+
+    h1 {
+      font-size: 1.875rem;
+      font-family: monospace;
+      color: white;
+      letter-spacing: -0.025em;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.125rem;
+      font-family: monospace;
+      color: white;
+      letter-spacing: -0.025em;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 1rem;
+
+      font-family: monospace;
+      list-style: none;
+      padding: 0;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="home">
+    <img 
+      src="assets/cat.gif"
+      class="cat"
+      alt="cat"
+    >
+
+    <h1>CENGIZ CIMEN</h1>
+
+    <p>
+      Computer Science & Mathematics @ UNSW
+    </p>
+
+    <ul>
+      <li>
+        <a href="https://github.com/CinnamonNug/rgbd2sdg" target="_blank">
+          [ RGBD2SDG ]
+        </a>
+      </li>
+
+      <li>
+        <a href="https://quantsoc.org" target="_blank">
+          [ QuantSoc ]
+        </a>
+      </li>
+
+      <li>
+        <a href="https://github.com/CinnamonNug/ELPVAnalyser" target="_blank">
+          [ ELPVAnalyser ]
+        </a>
+      </li>
+    </ul>
+  </div>
+
+</body>
+</html>
