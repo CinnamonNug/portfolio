@@ -1,20 +1,21 @@
+import { defineConfig } from "vite";
 import { solidStart } from "@solidjs/start/config";
 import tailwindcss from "@tailwindcss/vite";
+import { nitro } from "nitro/vite";
 
-export default {
-  // SolidStart's internal router architecture expects plugins down here
+export default defineConfig({
+  // 1. Vite's native property handles the asset sub-directory routing prefix
+  base: "/portfolio/",
+
   plugins: [
-    solidStart({
-      // 1. SolidStart handles Nitro natively via this built-in 'server' key
-      server: {
-        baseURL: "/portfolio/",
-        preset: "static", // Forces the 'static' SSG build
+    nitro({
+        preset: "static", // Forces the production SSG crawl
         prerender: {
           routes: ["/"],
-          crawlLinks: true
+          crawlLinks: true // Restores your original crawler link discovery
         }
-      }
-    }),
-    tailwindcss() // Clean Tailwind v4 compilation path
+      }),
+    solidStart(),
+    tailwindcss()
   ]
-};
+});
