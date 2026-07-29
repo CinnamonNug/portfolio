@@ -8,11 +8,12 @@ export default defineConfig({
     solidStart(),
     tailwindcss(),
     nitro({
-      baseURL: "/portfolio/",
+      baseURL: "/",
       prerender: {
         routes: ["/"],
         crawlLinks: true,
       }
     })
-  ]
-});
+  ],
+  }
+);
